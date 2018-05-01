@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1.iml" filepath="$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1_main.iml" group="010518_SinayevHomework1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/010518_SinayevHomework1_test.iml" group="010518_SinayevHomework1" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_main.iml" group="300418_SinayevFirstSeleniumTest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_test.iml" group="300418_SinayevFirstSeleniumTest" />

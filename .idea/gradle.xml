@@ -4,12 +4,42 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/010518_SinayevAddressBookNewContact" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/010518_SinayevAddressBookNewContact" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/010518_SinayevAddressbook" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/010518_SinayevAddressbook" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/010518_SinayevHomework1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/010518_SinayevHomework1" />
           </set>
         </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/010518_SinayevHomework2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/010518_SinayevHomework2" />
+          </set>
+        </option>
+        <option name="useAutoImport" value="true" />
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />

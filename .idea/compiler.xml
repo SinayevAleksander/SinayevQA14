@@ -2,8 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="010518_SinayevAddressbook_main" target="1.8" />
+      <module name="010518_SinayevAddressbook_test" target="1.8" />
+      <module name="010518_SinayevAddressBookNewContact_main" target="1.8" />
+      <module name="010518_SinayevAddressBookNewContact_test" target="1.8" />
       <module name="010518_SinayevHomework1_main" target="1.8" />
       <module name="010518_SinayevHomework1_test" target="1.8" />
+      <module name="010518_SinayevHomework2_main" target="1.8" />
+      <module name="010518_SinayevHomework2_test" target="1.8" />
       <module name="300418_SinayevFirstSeleniumTest_main" target="1.8" />
       <module name="300418_SinayevFirstSeleniumTest_test" target="1.8" />
     </bytecodeTargetLevel>

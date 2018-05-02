@@ -20,11 +20,12 @@ public class TelRan {
   public void setUp() throws Exception {
     driver = new ChromeDriver();
 //    baseUrl = "https://www.katalon.com/";
-//    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testTelRan() throws Exception {
+//    OpenSite
     driver.get("https://www.tel-ran.com/");
   }
 

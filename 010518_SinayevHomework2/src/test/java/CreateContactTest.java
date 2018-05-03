@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class CreateContactTest {
     private WebDriver driver;
 
-
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         driver = new ChromeDriver();

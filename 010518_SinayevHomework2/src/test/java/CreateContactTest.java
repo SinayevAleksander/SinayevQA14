@@ -91,10 +91,10 @@ public class CreateContactTest {
         driver.findElement(By.name("notes")).clear();
         driver.findElement(By.name("notes")).sendKeys("Notes");
 
-        //submitCreateContact
+        // submitCreateContact
         driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
 
-        //returnToHomePage
+        // returnToHomePage
         driver.findElement(By.linkText("home page")).click();
     }
 

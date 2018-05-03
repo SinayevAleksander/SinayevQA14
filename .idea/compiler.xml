@@ -12,6 +12,8 @@
       <module name="010518_SinayevHomework2_test" target="1.8" />
       <module name="300418_SinayevFirstSeleniumTest_main" target="1.8" />
       <module name="300418_SinayevFirstSeleniumTest_test" target="1.8" />
+      <module name="Aleksandra_main" target="1.8" />
+      <module name="Aleksandra_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

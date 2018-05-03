@@ -14,6 +14,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_main.iml" group="300418_SinayevFirstSeleniumTest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/300418_SinayevFirstSeleniumTest_test.iml" group="300418_SinayevFirstSeleniumTest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra_main.iml" group="Aleksandra" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra_test.iml" group="Aleksandra" />
     </modules>
   </component>
 </project>

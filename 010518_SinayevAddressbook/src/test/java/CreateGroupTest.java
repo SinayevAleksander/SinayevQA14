@@ -1,93 +1,73 @@
 //package com.example.tests;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
+import org.testng.annotations.Test;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
-import static org.testng.Assert.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
+public class CreateGroupTest extends TestBase{
 
-public class CreateGroupTest {
-  private WebDriver driver;
-//  private String baseUrl;
-//  private boolean acceptNextAlert = true;
-//  private StringBuffer verificationErrors = new StringBuffer();
-
-  @BeforeClass(alwaysRun = true)
-  public void setUp() throws Exception {
-    driver = new ChromeDriver();
-//    baseUrl = "https://www.katalon.com/";
-//    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-  }
-
-  @Test
+  @Test(priority = 1)
   public void testCreateGroup() throws Exception {
-    driver.get("http://localhost/addressbook/");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.name("user")).click();
-    driver.findElement(By.name("user")).click();
-    // ERROR: Caught exception [ERROR: Unsupported command [doubleClick | name=user | ]]
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
-    driver.findElement(By.linkText("groups")).click();
-    driver.findElement(By.name("new")).click();
-    driver.findElement(By.name("group_name")).click();
-    driver.findElement(By.name("group_name")).clear();
-    driver.findElement(By.name("group_name")).sendKeys("name_2");
-    driver.findElement(By.name("group_header")).click();
-    driver.findElement(By.name("group_header")).clear();
-    driver.findElement(By.name("group_header")).sendKeys("header");
-    driver.findElement(By.name("group_footer")).click();
-    driver.findElement(By.name("group_footer")).clear();
-    driver.findElement(By.name("group_footer")).sendKeys("footer");
-    driver.findElement(By.name("submit")).click();
-    driver.findElement(By.linkText("group page")).click();
+
+    // goToGroupsPage
+    goToGroupsPage();
+
+    // goToAddGroupPage
+    goToAddGroupPage();
+
+    // enterDataGroup
+    enterDataGroup("name_2", "header", "footer");
+
+    // submitCreateContact
+    submitCreateContact();
+
+    // returnToGroupPage
+    returnToGroupPage();
   }
 
-  @AfterClass(alwaysRun = true)
-  public void tearDown() throws Exception {
-    driver.quit();
-//    String verificationErrorString = verificationErrors.toString();
-//    if (!"".equals(verificationErrorString)) {
-//      fail(verificationErrorString);
-//    }
+  @Test(priority = 2)
+  public void testCreateGroupShortName() throws Exception {
+
+    // goToAddGroupPage
+    goToAddGroupPage();
+
+    // enterDataGroup
+    enterDataGroup("n", "h", "f");
+
+    // submitCreateContact
+    submitCreateContact();
+
+    // returnToGroupPage
+    returnToGroupPage();
   }
 
-  private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
+  @Test(priority = 3)
+  public void testCreateGroupLongName() throws Exception {
+
+    // goToAddGroupPage
+    goToAddGroupPage();
+
+    // enterDataGroup
+    enterDataGroup("LongName", "LongHeader", "LongFooter");
+
+    // submitCreateContact
+    submitCreateContact();
+
+    // returnToGroupPage
+    returnToGroupPage();
   }
 
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
+  @Test(enabled = false)
+  public void testCreateGroupEmptyName() throws Exception {
 
-//  private String closeAlertAndGetItsText() {
-//    try {
-//      Alert alert = driver.switchTo().alert();
-//      String alertText = alert.getText();
-//      if (acceptNextAlert) {
-//        alert.accept();
-//      } else {
-//        alert.dismiss();
-//      }
-//      return alertText;
-//    } finally {
-//      acceptNextAlert = true;
-//    }
-//  }
+    // goToAddGroupPage
+    goToAddGroupPage();
+
+    // enterDataGroup
+    enterDataGroup("", "", "");
+
+    // submitCreateContact
+    submitCreateContact();
+
+    // returnToGroupPage
+    returnToGroupPage();
+  }
 }

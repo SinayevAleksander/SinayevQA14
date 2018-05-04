@@ -13,8 +13,7 @@ public class CreateContactTest extends TestBase {
 
     @Test
     public void testCreateContact() throws Exception {
-        openSite();
-        authorization();
+
         goToAddContact();
         enterContantInformation();
         submitCreateContact();

@@ -18,74 +18,74 @@ public class TestBase {
     }
 
 
-    public void enterContantInformation() {
+    public void enterContantInformation(String firstName, String middleName, String lastName, String nickname, String title, String company, String address, String home, String mobile, String work, String fax, String eMail, String eMail2, String eMail3, String homepage, String address1, String home1, String notes) {
         driver.findElement(By.name("firstname")).click();
         driver.findElement(By.name("firstname")).clear();
-        driver.findElement(By.name("firstname")).sendKeys("First name");
+        driver.findElement(By.name("firstname")).sendKeys(firstName);
         driver.findElement(By.name("middlename")).click();
         driver.findElement(By.name("middlename")).clear();
-        driver.findElement(By.name("middlename")).sendKeys("Middle name");
+        driver.findElement(By.name("middlename")).sendKeys(middleName);
         driver.findElement(By.name("lastname")).click();
         driver.findElement(By.name("lastname")).clear();
-        driver.findElement(By.name("lastname")).sendKeys("Last name");
+        driver.findElement(By.name("lastname")).sendKeys(lastName);
         driver.findElement(By.name("nickname")).click();
         driver.findElement(By.name("nickname")).clear();
-        driver.findElement(By.name("nickname")).sendKeys("Nickname");
+        driver.findElement(By.name("nickname")).sendKeys(nickname);
         driver.findElement(By.name("title")).click();
         driver.findElement(By.name("title")).clear();
-        driver.findElement(By.name("title")).sendKeys("Title");
+        driver.findElement(By.name("title")).sendKeys(title);
         driver.findElement(By.name("company")).click();
         driver.findElement(By.name("company")).clear();
-        driver.findElement(By.name("company")).sendKeys("Company");
+        driver.findElement(By.name("company")).sendKeys(company);
         driver.findElement(By.name("address")).click();
         driver.findElement(By.name("address")).clear();
-        driver.findElement(By.name("address")).sendKeys("Address");
+        driver.findElement(By.name("address")).sendKeys(address);
         driver.findElement(By.name("home")).click();
         driver.findElement(By.name("home")).clear();
-        driver.findElement(By.name("home")).sendKeys("Home");
+        driver.findElement(By.name("home")).sendKeys(home);
         driver.findElement(By.name("mobile")).click();
         driver.findElement(By.name("mobile")).clear();
-        driver.findElement(By.name("mobile")).sendKeys("Mobile");
+        driver.findElement(By.name("mobile")).sendKeys(mobile);
         driver.findElement(By.name("work")).click();
         driver.findElement(By.name("work")).clear();
-        driver.findElement(By.name("work")).sendKeys("Work");
+        driver.findElement(By.name("work")).sendKeys(work);
         driver.findElement(By.name("fax")).click();
         driver.findElement(By.name("fax")).clear();
-        driver.findElement(By.name("fax")).sendKeys("Fax");
+        driver.findElement(By.name("fax")).sendKeys(fax);
         driver.findElement(By.name("email")).click();
         driver.findElement(By.name("email")).clear();
-        driver.findElement(By.name("email")).sendKeys("E-mail");
+        driver.findElement(By.name("email")).sendKeys(eMail);
         driver.findElement(By.name("email2")).click();
         driver.findElement(By.name("email2")).clear();
-        driver.findElement(By.name("email2")).sendKeys("E-mail2");
+        driver.findElement(By.name("email2")).sendKeys(eMail2);
         driver.findElement(By.name("email3")).click();
         driver.findElement(By.name("email3")).clear();
-        driver.findElement(By.name("email3")).sendKeys("E-mail3");
+        driver.findElement(By.name("email3")).sendKeys(eMail3);
         driver.findElement(By.name("homepage")).click();
         driver.findElement(By.name("homepage")).clear();
-        driver.findElement(By.name("homepage")).sendKeys("Homepage");
+        driver.findElement(By.name("homepage")).sendKeys(homepage);
         driver.findElement(By.name("address2")).click();
         driver.findElement(By.name("address2")).clear();
-        driver.findElement(By.name("address2")).sendKeys("Address");
+        driver.findElement(By.name("address2")).sendKeys(address1);
         driver.findElement(By.name("phone2")).click();
         driver.findElement(By.name("phone2")).clear();
-        driver.findElement(By.name("phone2")).sendKeys("Home");
+        driver.findElement(By.name("phone2")).sendKeys(home1);
         driver.findElement(By.name("notes")).click();
         driver.findElement(By.name("notes")).clear();
-        driver.findElement(By.name("notes")).sendKeys("Notes");
+        driver.findElement(By.name("notes")).sendKeys(notes);
     }
 
     public void goToAddContact() {
         driver.findElement(By.linkText("add new")).click();
     }
 
-    public void authorization() {
+    public void authorization(String admin, String secret) {
         driver.findElement(By.name("user")).click();
         driver.findElement(By.name("user")).clear();
-        driver.findElement(By.name("user")).sendKeys("admin");
+        driver.findElement(By.name("user")).sendKeys(admin);
         driver.findElement(By.name("pass")).click();
         driver.findElement(By.name("pass")).clear();
-        driver.findElement(By.name("pass")).sendKeys("secret");
+        driver.findElement(By.name("pass")).sendKeys(secret);
         driver.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
@@ -110,7 +110,7 @@ public class TestBase {
         openSite();
 
         // authorization
-        authorization();
+        authorization("admin", "secret");
     }
 
     public void returnToHomePage() {

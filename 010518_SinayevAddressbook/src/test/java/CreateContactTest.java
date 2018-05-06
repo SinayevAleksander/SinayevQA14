@@ -1,13 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class CreateContactTest extends TestBase {
 
@@ -15,7 +6,10 @@ public class CreateContactTest extends TestBase {
     public void testCreateContact() throws Exception {
 
         goToAddContact();
-        enterContantInformation();
+        enterContantInformation("First name", "Middle name", "Last name",
+                "Nickname", "Title", "Company", "Address", "Home",
+                "Mobile", "Work", "Fax", "E-mail", "E-mail2", "E-mail3",
+                "Homepage", "Address", "Home", "Notes");
         submitCreateContact();
         returnToHomePage();
     }

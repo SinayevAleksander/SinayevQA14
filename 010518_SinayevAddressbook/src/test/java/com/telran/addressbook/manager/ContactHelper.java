@@ -63,7 +63,7 @@ public class ContactHelper extends HelperBase {
     public void createContact() {
         NavigationHelper navigationHelper = new NavigationHelper(driver);
         navigationHelper.goToAddNewPage();
-        fillContactData(new ContactData());
+//        fillContactData(new ContactData());
         submitCreateContact();
         returnToHomePage();
     }

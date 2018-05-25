@@ -6,12 +6,15 @@ import org.testng.annotations.Test;
 
 public class CreateGroupTest extends TestBase{
 
-  @Test(priority = 1)
+  @Test
   public void testCreateGroup() throws Exception {
     appManager.getNavigationHelper().goToGroupsPage();
     int before = appManager.getGroupHelper().getGroupCount();
     appManager.getGroupHelper().goToNewGroupPage();
-    appManager.getGroupHelper().fillGroupData(new GroupDate(null, "header", "footer"));
+    appManager.getGroupHelper().fillGroupData(new GroupDate()
+            .withName("Name")
+            .withHeader("Header")
+            .withFooter("Footer"));
     appManager.getGroupHelper().submitCreateGroup();
     appManager.getGroupHelper().returnToGroupPage();
     int after = appManager.getGroupHelper().getGroupCount();
@@ -19,12 +22,15 @@ public class CreateGroupTest extends TestBase{
     System.out.println("After:"+after+" "+ "Before:"+before);
   }
 
-  @Test(priority = 2)
+  @Test
   public void testCreateGroupShortName() throws Exception {
     appManager.getNavigationHelper().goToGroupsPage();
     int before = appManager.getGroupHelper().getGroupCount();
     appManager.getGroupHelper().goToNewGroupPage();
-    appManager.getGroupHelper().fillGroupData(new GroupDate("n", "h", "f"));
+    appManager.getGroupHelper().fillGroupData(new GroupDate()
+            .withName("N")
+            .withHeader("H")
+            .withFooter("F"));
     appManager.getContactHelper().submitCreateContact();
     appManager.getGroupHelper().returnToGroupPage();
     int after = appManager.getGroupHelper().getGroupCount();
@@ -33,12 +39,15 @@ public class CreateGroupTest extends TestBase{
   }
 
 
-  @Test(priority = 3)
+  @Test
   public void testCreateGroupLongName() throws Exception {
     appManager.getNavigationHelper().goToGroupsPage();
     int before = appManager.getGroupHelper().getGroupCount();
     appManager.getGroupHelper().goToNewGroupPage();
-    appManager.getGroupHelper().fillGroupData(new GroupDate("LongName", "LongHeader", "LongFooter"));
+    appManager.getGroupHelper().fillGroupData(new GroupDate()
+            .withName("LongName")
+            .withHeader("LongHeader")
+            .withFooter("LongFooter"));
     appManager.getContactHelper().submitCreateContact();
     appManager.getGroupHelper().returnToGroupPage();
     int after = appManager.getGroupHelper().getGroupCount();
@@ -47,11 +56,11 @@ public class CreateGroupTest extends TestBase{
 
   }
 
-  @Test(priority = 4)
+  @Test
   public void testCreateGroupEmptyName() throws Exception {
     int before = appManager.getGroupHelper().getGroupCount();
     appManager.getGroupHelper().goToNewGroupPage();
-    appManager.getGroupHelper().fillGroupData(new GroupDate("", "", ""));
+    appManager.getGroupHelper().fillGroupData(new GroupDate());
     appManager.getGroupHelper().submitCreateGroup();
     appManager.getGroupHelper().returnToGroupPage();
     int after = appManager.getGroupHelper().getGroupCount();

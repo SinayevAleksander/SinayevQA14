@@ -67,4 +67,8 @@ public class ContactHelper extends HelperBase {
         submitCreateContact();
         returnToHomePage();
     }
+
+    public void submitContactModification() {
+        click(By.xpath("//*[@value='Update']"));
+    }
 }

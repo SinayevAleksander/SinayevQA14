@@ -14,7 +14,10 @@ public class EditGroupTest extends TestBase {
         int before = appManager.getGroupHelper().getGroupCount();
         appManager.getGroupHelper().selectGroup();
         appManager.getGroupHelper().goToEditGroupPage();
-        appManager.getGroupHelper().fillGroupData(new GroupDate(null,"headerEdit","footerEdit"));
+        appManager.getGroupHelper().fillGroupData(new GroupDate()
+                .withName(null)
+                .withHeader("EditHeader")
+                .withFooter("EditFooter"));
         appManager.getGroupHelper().submitGroupModification();
         appManager.getGroupHelper().returnToGroupPage();
         int after = appManager.getGroupHelper().getGroupCount();

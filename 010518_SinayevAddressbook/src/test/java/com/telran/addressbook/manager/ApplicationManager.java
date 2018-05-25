@@ -5,6 +5,11 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,9 +19,22 @@ public class ApplicationManager {
     private GroupHelper groupHelper;
     private HelperBase helperBase;
     protected WebDriver driver;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void start() {
-        driver = new ChromeDriver();
+        if (browser.equals(BrowserType.CHROME)) {
+            driver = new ChromeDriver();
+        }else if (browser.equals(BrowserType.FIREFOX)) {
+            driver = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
+        }else if(browser.equals(BrowserType.IE)){
+            driver = new InternetExplorerDriver();
+        }else if(browser.equals(BrowserType.EDGE)){
+            driver = new EdgeDriver();
+        }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         navigationHelper = new NavigationHelper(driver);
         groupHelper = new GroupHelper(driver);
@@ -36,7 +54,7 @@ public class ApplicationManager {
 
     public void authorization(String user, String pwd) {
         helperBase.type(By.name("user"), user);
-        helperBase.type(By.name("pass"),pwd);
+        helperBase.type(By.name("pass"), pwd);
         helperBase.click(By.xpath("//input[@value='Login']"));
     }
 

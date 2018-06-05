@@ -3,6 +3,7 @@ package com.telran.addressbook.manager;
 import com.telran.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class ContactHelper extends HelperBase {
 
@@ -29,6 +30,15 @@ public class ContactHelper extends HelperBase {
         type(By.name("address2"),contact.getAddress1());
         type(By.name("phone2"),contact.getHome1());
         type(By.name("notes"),contact.getNotes());
+        attach(By.name("photo"),contact.getPhoto());
+        if(!isElementPresent(By.xpath("option[contains(text(),"+"'"+contact.getGroup()+"'"+")]"))){
+
+            new GroupHelper(driver).createGroup(contact.getGroup());
+        }
+        new Select(driver.findElement(By.xpath("//select[@name='new_group']")))
+                .selectByVisibleText(contact.getGroup());
+
+
 
     }
 

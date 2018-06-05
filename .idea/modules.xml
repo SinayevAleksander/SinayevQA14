@@ -17,6 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra_main.iml" group="Aleksandra" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Aleksandra_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Aleksandra_test.iml" group="Aleksandra" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mishpahug.iml" filepath="$PROJECT_DIR$/.idea/modules/mishpahug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mishpahug_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mishpahug_main.iml" group="mishpahug" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mishpahug_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mishpahug_test.iml" group="mishpahug" />
     </modules>
   </component>
 </project>

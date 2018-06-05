@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-    protected static ApplicationManager appManager = new ApplicationManager(BrowserType.CHROME);
+    public static ApplicationManager appManager = new ApplicationManager(System.getProperty("browser",BrowserType.CHROME));
 
     @BeforeSuite(alwaysRun = true)
     public void setUp() throws Exception {

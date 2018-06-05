@@ -1,5 +1,7 @@
 package com.telran.addressbook.model;
 
+import java.io.File;
+
 public class ContactData {
     private String firstName;
     private String middleName;
@@ -19,8 +21,10 @@ public class ContactData {
     private String address1;
     private String home1;
     private String notes;
+    private File photo;
+    private String group;
 
-//    public ContactData() {
+//        public ContactData() {
 //        this.firstName = null;
 //        this.middleName = null;
 //        this.lastName = null;
@@ -152,6 +156,16 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -223,6 +237,16 @@ public class ContactData {
     public String getNotes() {
         return notes;
     }
+
+    public File getPhoto() {
+        return photo;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+
 }
 
 

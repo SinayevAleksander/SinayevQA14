@@ -4,6 +4,8 @@ import com.telran.addressbook.model.ContactData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class CreateContactTest extends TestBase {
 
     @Test
@@ -11,6 +13,8 @@ public class CreateContactTest extends TestBase {
         appManager.getNavigationHelper().goToHomePage();
         int before = appManager.getContactHelper().getContactCount();
         appManager.getNavigationHelper().goToAddNewPage();
+        File photo = new File("src/test/resources/cat.jpg");
+
         appManager.getContactHelper().fillContactData(
                 new ContactData()
                         .withFirstName("First name")
@@ -30,7 +34,9 @@ public class CreateContactTest extends TestBase {
                         .withHomepage("HomePage")
                         .withAddress1("Address1")
                         .withHome1("Home1")
-                        .withNotes("Notes"));
+                        .withNotes("Notes")
+                        .withPhoto(photo)
+                        .withGroup("LongName"));
         appManager.getContactHelper().submitCreateContact();
         appManager.getContactHelper().returnToHomePage();
         int after = appManager.getContactHelper().getContactCount();

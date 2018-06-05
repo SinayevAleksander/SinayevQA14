@@ -37,4 +37,13 @@ public class GroupDate {
         this.footer = footer;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "GroupDate{" +
+                "nameGroup='" + nameGroup + '\'' +
+                ", header='" + header + '\'' +
+                ", footer='" + footer + '\'' +
+                '}';
+    }
 }

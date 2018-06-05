@@ -58,6 +58,14 @@ public class GroupHelper extends HelperBase{
         returnToGroupPage();
     }
 
+    public void createGroup(String groupName) {
+        new NavigationHelper(driver).goToGroupsPage();
+        goToNewGroupPage();
+        fillGroupData(new GroupDate().withName(groupName));
+        submitCreateGroup();
+        returnToGroupPage();
+    }
+
     // Delete Group Finish
 
     // Edit Group Start

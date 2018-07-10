@@ -1,6 +1,11 @@
 package com.telran.addressbook.model;
 
+import java.util.Objects;
+
 public class GroupDate {
+
+
+    private  int id;
     private  String nameGroup;
     private  String header;
     private  String footer;
@@ -23,6 +28,10 @@ public class GroupDate {
         return footer;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public GroupDate  withName(String nameGroup) {
         this.nameGroup = nameGroup;
         return this;
@@ -38,12 +47,31 @@ public class GroupDate {
         return this;
     }
 
+    public GroupDate withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupDate groupDate = (GroupDate) o;
+        return id == groupDate.id &&
+                Objects.equals(nameGroup, groupDate.nameGroup);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, nameGroup);
+    }
+
     @Override
     public String toString() {
         return "GroupDate{" +
-                "nameGroup='" + nameGroup + '\'' +
-                ", header='" + header + '\'' +
-                ", footer='" + footer + '\'' +
+                "id=" + id +
+                ", nameGroup='" + nameGroup + '\'' +
                 '}';
     }
 }

@@ -27,7 +27,11 @@ task testContacts(type:Test){
     useTestNG {
         suites 'src/test/resources/testng-contacts.xml'
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 1401286d7d498fe19ee6b51c63b4c0dc556a12a5
 
 }
 

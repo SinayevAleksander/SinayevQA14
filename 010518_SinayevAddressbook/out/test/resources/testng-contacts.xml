@@ -3,8 +3,8 @@
 <suite name="Suite1" verbose="1" >
     <test name="Contacts">
         <classes>
-            <class name="com.telran.addressbook.test.CreateContactTest"/>
-            <class name="com.telran.addressbook.test.EditContactTest"/>
+            <!--<class name="com.telran.addressbook.test.CreateContactTest"/>-->
+            <!--<class name="com.telran.addressbook.test.EditContactTest"/>-->
             <class name="com.telran.addressbook.test.DeleteContactTest"/>
         </classes>
     </test>
